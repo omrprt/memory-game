@@ -28,10 +28,10 @@ var cardsInPlay = [];
 
 var checkForMatch = function() {
 	if (cardsInPlay[0] === cardsInPlay[1]) {
-		alert("You found a match!");
+		alert("You found a match! Click 'OK' to refresh."); location.reload();
 	}
 	else {
-		alert("Sorry, try again");
+		alert("Sorry, try again. Click 'OK' to refresh."); location.reload();
 	}
 };
 
@@ -45,8 +45,9 @@ var flipCard = function() {
 
 	this.setAttribute("src", cards[cardId].cardImage);
 		if (cardsInPlay.length === 2) {
-		checkForMatch();
+			setTimeout(checkForMatch, 200)
 	}
+	// checkForMatch; taken out and replaced with a bonus above
 	};
 
 var createBoard = function() {
@@ -54,9 +55,11 @@ var createBoard = function() {
 		var cardElement = document.createElement("img");
 		cardElement.setAttribute("src", "images/back.png");
 		cardElement.setAttribute("data-id", i);
-		cardElement.addEventListener("click", flipCard);
+		
 		document.getElementById("game-board").appendChild(cardElement);
+		cardElement.addEventListener("click", flipCard);
 }};
+
 
 createBoard();
 

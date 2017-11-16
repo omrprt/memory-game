@@ -20,9 +20,21 @@
 
 		}
 
+/* added as a bonus */
+		.navbar {
+			position: fixed;
+   			top: 0;
+   			width: 100%;
+		}
+
+		/*section {
+			margin-top: 250px;
+		}*/
+
 		main {
 			width: 850px;
 			margin: 35px auto;
+			margin-top: 225px;
 		}
 
 		img {
@@ -51,6 +63,7 @@
 			border-color: white;
 		}
 
+
 		h2, h3 {
 			font-family: "Raleway", sans-serif;
 			color: #0D2C40;
@@ -73,6 +86,14 @@
 			font-size: 18px;
 		}
 
+		#github {
+			font-family: "Droid Serif", Serif;
+			line-height: 26px;
+			font-size: 18px;
+			color: blue;	
+			text-transform: none;
+			margin: 0 0px;
+		}
 
 		footer {
 			text-transform: uppercase;
